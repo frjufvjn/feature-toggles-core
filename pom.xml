@@ -10,11 +10,12 @@
     </parent>
     <groupId>io.frjufvjn</groupId>
     <artifactId>feature-toggles-core</artifactId>
-    <version>0.1.1</version>
+    <version>0.1.2</version>
     <name>feature-toggles-core</name>
     <description>feature-toggles-core</description>
     <properties>
         <java.version>17</java.version>
+        <spring-boot.repackage.skip>true</spring-boot.repackage.skip>
     </properties>
 
     <repositories>
@@ -57,10 +58,6 @@
                             <groupId>org.projectlombok</groupId>
                             <artifactId>lombok</artifactId>
                         </exclude>
-                        <execution>
-                            <id>repackage</id>
-                            <phase>none</phase>
-                        </execution>
                     </excludes>
                 </configuration>
             </plugin>
