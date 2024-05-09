@@ -1,1 +1,1 @@
-# feature-toggles-core [![Java CI with Maven](https://github.com/frjufvjn/feature-toggles-core/actions/workflows/maven.yml/badge.svg)](https://github.com/frjufvjn/feature-toggles-core/actions/workflows/maven.yml)
+# feature-toggles-core [![Java CI with Maven](https://github.com/frjufvjn/feature-toggles-core/actions/workflows/maven.yml/badge.svg)](https://github.com/frjufvjn/feature-toggles-core/actions/workflows/maven.yml) [![](https://jitpack.io/v/frjufvjn/feature-toggles-core.svg)](https://jitpack.io/#frjufvjn/feature-toggles-core)
