@@ -2,22 +2,15 @@ package io.frjufvjn.featuretoggles.router;
 
 import io.frjufvjn.featuretoggles.FeatureBlockedException;
 import io.frjufvjn.featuretoggles.orchestration.FeatureOrchestration;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 import java.util.Map;
 
 @Component
 public class FeatureToggles {
-    private final FeatureTogglesStrategy featureTogglesMemory;
     private final FeatureTogglesStrategy featureTogglesCache;
 
-    private boolean cacheMode = true;
-
-    public FeatureToggles(
-            @Qualifier("featureTogglesMemory") FeatureTogglesStrategy featureTogglesMemory,
-            @Qualifier("featureTogglesCache") FeatureTogglesStrategy featureTogglesCache) {
-        this.featureTogglesMemory = featureTogglesMemory;
+    public FeatureToggles(FeatureTogglesStrategy featureTogglesCache) {
         this.featureTogglesCache = featureTogglesCache;
     }
 
@@ -27,19 +20,8 @@ public class FeatureToggles {
         }
     }
 
-    public boolean isCacheMode() {
-        return cacheMode;
-    }
-
-    public void setCacheMode(boolean enable) {
-        cacheMode = enable;
-    }
-
     private FeatureTogglesStrategy instance() {
-        if (cacheMode) {
-            return this.featureTogglesCache;
-        }
-        return this.featureTogglesMemory;
+        return this.featureTogglesCache;
     }
 
     /**
