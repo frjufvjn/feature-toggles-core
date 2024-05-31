@@ -1,7 +1,7 @@
-package io.frjufvjn.featuretoggles;
+package io.frjufvjn.featuretoggles.advert;
 
 import io.frjufvjn.featuretoggles.orchestration.FeatureOrchestration;
-import io.frjufvjn.featuretoggles.router.FeatureToggles;
+import io.frjufvjn.featuretoggles.router.FeatureCoreRouter;
 import org.springframework.stereotype.Service;
 
 import java.util.Map;
@@ -10,13 +10,12 @@ import java.util.Set;
 @Service
 public class AdvertServiceGate {
     private final Map<String, AdeverService> adeverServiceMap;
-    private final FeatureToggles featureToggles;
+    private final FeatureCoreRouter featureCoreRouter;
     private static final String FEATURE = "advert";
 
-    public AdvertServiceGate(Set<AdeverService> adeverServiceMap,
-                             FeatureToggles featureToggles) {
+    public AdvertServiceGate(Set<AdeverService> adeverServiceMap, FeatureCoreRouter featureCoreRouter) {
         this.adeverServiceMap = FeatureOrchestration.compose(FEATURE, adeverServiceMap);
-        this.featureToggles = featureToggles;
+        this.featureCoreRouter = featureCoreRouter;
     }
 
     public String findAdvert() {
@@ -24,6 +23,6 @@ public class AdvertServiceGate {
     }
 
     private AdeverService getActiveInstance() {
-        return featureToggles.getInstance(FEATURE, adeverServiceMap);
+        return featureCoreRouter.getInstance(FEATURE, adeverServiceMap);
     }
 }

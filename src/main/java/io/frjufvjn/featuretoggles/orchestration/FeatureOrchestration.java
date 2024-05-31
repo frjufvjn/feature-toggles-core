@@ -1,5 +1,7 @@
 package io.frjufvjn.featuretoggles.orchestration;
 
+import io.frjufvjn.featuretoggles.router.FeatureCoreRouter;
+
 import java.util.Map;
 import java.util.Optional;
 import java.util.Set;
@@ -34,7 +36,7 @@ public class FeatureOrchestration {
     }
 
     /**
-     * {@link io.frjufvjn.featuretoggles.router.FeatureToggles#getInstance(String, Map)}에서 참조하기 위해 제공
+     * {@link FeatureCoreRouter#getInstance(String, Map)}에서 참조하기 위해 제공
      */
     public static <T> T getInstanceInternal(final String toggle, Map<String, T> instances) {
         return Optional.ofNullable(instances.get(toggle))

@@ -1,23 +1,14 @@
 package io.frjufvjn.featuretoggles.router;
 
-import io.frjufvjn.featuretoggles.FeatureBlockedException;
 import io.frjufvjn.featuretoggles.orchestration.FeatureOrchestration;
-import org.springframework.stereotype.Component;
 
 import java.util.Map;
 
-@Component
-public class FeatureToggles {
-    private final FeatureTogglesCache featureTogglesCache;
+public class FeatureCoreRouter {
+    private final AbstractFeatureDataResolver abstractFeatureDataResolver;
 
-    public FeatureToggles(FeatureTogglesCache featureTogglesCache) {
-        this.featureTogglesCache = featureTogglesCache;
-    }
-
-    private static void bolckToggleCheck(String toggle) {
-        if (ManagedToggleType.isBlocked(toggle)) {
-            throw new FeatureBlockedException();
-        }
+    public FeatureCoreRouter(AbstractFeatureDataResolver abstractFeatureDataResolver) {
+        this.abstractFeatureDataResolver = abstractFeatureDataResolver;
     }
 
     /**
@@ -37,8 +28,7 @@ public class FeatureToggles {
     }
 
     public String getActiveToggle(String feature) {
-        String toggle = featureTogglesCache.getActiveToggle(feature);
-        bolckToggleCheck(toggle);
-        return toggle;
+        var featuresResource = abstractFeatureDataResolver.getActiveToggle(feature);
+        return featuresResource.getToggle();
     }
 }

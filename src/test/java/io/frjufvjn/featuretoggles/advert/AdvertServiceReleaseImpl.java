@@ -1,5 +1,6 @@
-package io.frjufvjn.featuretoggles;
+package io.frjufvjn.featuretoggles.advert;
 
+import io.frjufvjn.featuretoggles.FeatureOption;
 import org.springframework.stereotype.Service;
 
 @FeatureOption(name = "release")

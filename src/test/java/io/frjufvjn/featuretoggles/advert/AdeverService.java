@@ -1,4 +1,4 @@
-package io.frjufvjn.featuretoggles;
+package io.frjufvjn.featuretoggles.advert;
 
 public interface AdeverService {
     String findAdvert();
