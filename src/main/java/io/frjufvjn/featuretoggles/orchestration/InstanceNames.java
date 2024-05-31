@@ -3,9 +3,10 @@ package io.frjufvjn.featuretoggles.orchestration;
 import io.frjufvjn.featuretoggles.FeatureInstanceNames;
 import io.frjufvjn.featuretoggles.FeatureOption;
 import io.frjufvjn.featuretoggles.router.ManagedToggleType;
-import io.micrometer.common.util.StringUtils;
+
 
 import java.util.Map;
+import java.util.Objects;
 import java.util.Optional;
 import java.util.Set;
 import java.util.stream.Collectors;
@@ -19,7 +20,7 @@ public class InstanceNames {
                 .orElse(ProxyBeanExtractor.getFeatureOptionIfProxyBean(instance));
         if (featureOption != null) {
             // @FeatureOption 애노테이션의 name이 정의되어 있으면 name으로 정의
-            String featureName = StringUtils.isBlank(featureOption.name()) ? instance.getClass().getSimpleName() : featureOption.name();
+            String featureName = Objects.isNull(featureOption.name()) ? instance.getClass().getSimpleName() : featureOption.name();
             // @FeatureOption 애노테이션의 defaultFeature가 true이면 'default'로 정의
             if (featureOption.defaultFeature()) {
                 featureName = ManagedToggleType.DEFAULT.getCode();
