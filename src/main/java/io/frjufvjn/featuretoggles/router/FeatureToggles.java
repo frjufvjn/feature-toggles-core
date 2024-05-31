@@ -8,9 +8,9 @@ import java.util.Map;
 
 @Component
 public class FeatureToggles {
-    private final FeatureTogglesStrategy featureTogglesCache;
+    private final FeatureTogglesCache featureTogglesCache;
 
-    public FeatureToggles(FeatureTogglesStrategy featureTogglesCache) {
+    public FeatureToggles(FeatureTogglesCache featureTogglesCache) {
         this.featureTogglesCache = featureTogglesCache;
     }
 
@@ -18,10 +18,6 @@ public class FeatureToggles {
         if (ManagedToggleType.isBlocked(toggle)) {
             throw new FeatureBlockedException();
         }
-    }
-
-    private FeatureTogglesStrategy instance() {
-        return this.featureTogglesCache;
     }
 
     /**
@@ -41,22 +37,8 @@ public class FeatureToggles {
     }
 
     public String getActiveToggle(String feature) {
-        String toggle = instance().getActiveToggle(feature);
+        String toggle = featureTogglesCache.getActiveToggle(feature);
         bolckToggleCheck(toggle);
         return toggle;
-    }
-
-    /**
-     * feature에 대한 토글을 변경 (정적인 방식에서만 사용할것)
-     */
-    public void setActiveToggle(String feature, String toggle) {
-        instance().setActiveToggle(feature, toggle);
-    }
-
-    /**
-     * 정적인 방식에서만 사용할것
-     */
-    public void clear() {
-        instance().clear();
     }
 }
