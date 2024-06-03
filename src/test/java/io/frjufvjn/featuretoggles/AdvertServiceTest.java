@@ -1,6 +1,7 @@
 package io.frjufvjn.featuretoggles;
 
 import io.frjufvjn.featuretoggles.advert.AdvertServiceGate;
+import io.frjufvjn.featuretoggles.router.FeatureDataFetcher;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,7 +15,7 @@ public class AdvertServiceTest {
     private AdvertServiceGate advertServiceGate;
 
     /**
-     * {@link io.frjufvjn.featuretoggles.router.FeatureDataResolver} 에 'release' 토글을 반환하는 시나리오가 있다.
+     * {@link FeatureDataFetcher} 에 'release' 토글을 반환하는 시나리오가 있다.
      */
     @DisplayName("feature 데이터에 토글이 'release'로 설정이 되어 잇다면")
     @Test

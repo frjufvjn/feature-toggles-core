@@ -1,6 +1,9 @@
 package io.frjufvjn.featuretoggles.router;
 
-public class FeatureDataResolver extends AbstractFeatureDataResolver {
+import org.springframework.stereotype.Component;
+
+@Component
+public class FeatureDataFetcher implements FeatureDataCoreProvider {
     @Override
     public FeaturesResource getActiveToggle(String feature) {
         return FeaturesResource.builder()

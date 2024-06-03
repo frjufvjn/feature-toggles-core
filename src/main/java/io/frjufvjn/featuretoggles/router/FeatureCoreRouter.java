@@ -5,10 +5,10 @@ import io.frjufvjn.featuretoggles.orchestration.FeatureOrchestration;
 import java.util.Map;
 
 public class FeatureCoreRouter {
-    private final AbstractFeatureDataResolver abstractFeatureDataResolver;
+    private final FeatureDataCoreProvider featureCoreData;
 
-    public FeatureCoreRouter(AbstractFeatureDataResolver abstractFeatureDataResolver) {
-        this.abstractFeatureDataResolver = abstractFeatureDataResolver;
+    public FeatureCoreRouter(FeatureDataCoreProvider featureCoreData) {
+        this.featureCoreData = featureCoreData;
     }
 
     /**
@@ -28,7 +28,7 @@ public class FeatureCoreRouter {
     }
 
     public String getActiveToggle(String feature) {
-        var featuresResource = abstractFeatureDataResolver.getActiveToggle(feature);
+        var featuresResource = featureCoreData.getActiveToggle(feature);
         return featuresResource.getToggle();
     }
 }

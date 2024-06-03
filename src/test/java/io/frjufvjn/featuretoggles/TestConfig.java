@@ -1,19 +1,20 @@
 package io.frjufvjn.featuretoggles;
 
 import io.frjufvjn.featuretoggles.router.FeatureCoreRouter;
-import io.frjufvjn.featuretoggles.router.FeatureDataResolver;
+import io.frjufvjn.featuretoggles.router.FeatureDataCoreProvider;
+import io.frjufvjn.featuretoggles.router.FeatureDataFetcher;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
 public class TestConfig {
     @Bean
-    public FeatureDataResolver featureDataResolver() {
-        return new FeatureDataResolver();
+    public FeatureDataCoreProvider featureDataResolver() {
+        return new FeatureDataFetcher();
     }
 
     @Bean
-    public FeatureCoreRouter featureCoreRouter(FeatureDataResolver featureDataResolver) {
-        return new FeatureCoreRouter(featureDataResolver);
+    public FeatureCoreRouter featureCoreRouter() {
+        return new FeatureCoreRouter(new FeatureDataFetcher());
     }
 }
