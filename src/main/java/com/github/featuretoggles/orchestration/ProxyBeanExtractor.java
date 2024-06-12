@@ -1,6 +1,6 @@
-package io.frjufvjn.featuretoggles.orchestration;
+package com.github.featuretoggles.orchestration;
 
-import io.frjufvjn.featuretoggles.FeatureOption;
+import com.github.featuretoggles.FeatureOption;
 import org.springframework.aop.framework.AopProxyUtils;
 
 public class ProxyBeanExtractor {

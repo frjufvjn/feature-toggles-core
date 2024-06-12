@@ -1,4 +1,4 @@
-package io.frjufvjn.featuretoggles;
+package com.github.featuretoggles;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

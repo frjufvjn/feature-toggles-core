@@ -1,4 +1,4 @@
-package io.frjufvjn.featuretoggles.router;
+package com.github.featuretoggles.router;
 
 import org.springframework.stereotype.Component;
 

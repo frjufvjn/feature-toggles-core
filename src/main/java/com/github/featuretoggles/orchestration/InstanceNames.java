@@ -1,8 +1,8 @@
-package io.frjufvjn.featuretoggles.orchestration;
+package com.github.featuretoggles.orchestration;
 
-import io.frjufvjn.featuretoggles.FeatureInstanceNames;
-import io.frjufvjn.featuretoggles.FeatureOption;
-import io.frjufvjn.featuretoggles.router.ManagedToggleType;
+import com.github.featuretoggles.router.ManagedToggleType;
+import com.github.featuretoggles.FeatureInstanceNames;
+import com.github.featuretoggles.FeatureOption;
 
 
 import java.util.Map;

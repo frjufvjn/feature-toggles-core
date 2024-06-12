@@ -1,6 +1,6 @@
-package io.frjufvjn.featuretoggles.router;
+package com.github.featuretoggles.router;
 
-import io.frjufvjn.featuretoggles.orchestration.FeatureOrchestration;
+import com.github.featuretoggles.orchestration.FeatureOrchestration;
 
 import java.util.Map;
 

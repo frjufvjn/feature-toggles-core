@@ -1,7 +1,7 @@
-package io.frjufvjn.featuretoggles;
+package com.github.featuretoggles;
 
-import io.frjufvjn.featuretoggles.advert.AdvertServiceGate;
-import io.frjufvjn.featuretoggles.router.FeatureDataFetcher;
+import com.github.featuretoggles.advert.AdvertServiceGate;
+import com.github.featuretoggles.router.FeatureDataFetcher;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;

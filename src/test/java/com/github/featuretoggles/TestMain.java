@@ -1,4 +1,4 @@
-package io.frjufvjn.featuretoggles;
+package com.github.featuretoggles;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

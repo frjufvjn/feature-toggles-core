@@ -1,4 +1,4 @@
-package io.frjufvjn.featuretoggles.router;
+package com.github.featuretoggles.router;
 
 import lombok.Builder;
 import lombok.Getter;

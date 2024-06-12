@@ -1,7 +1,7 @@
-package io.frjufvjn.featuretoggles.advert;
+package com.github.featuretoggles.advert;
 
-import io.frjufvjn.featuretoggles.orchestration.FeatureOrchestration;
-import io.frjufvjn.featuretoggles.router.FeatureCoreRouter;
+import com.github.featuretoggles.orchestration.FeatureOrchestration;
+import com.github.featuretoggles.router.FeatureCoreRouter;
 import org.springframework.stereotype.Service;
 
 import java.util.Map;

@@ -1,6 +1,6 @@
-package io.frjufvjn.featuretoggles.advert;
+package com.github.featuretoggles.advert;
 
-import io.frjufvjn.featuretoggles.FeatureOption;
+import com.github.featuretoggles.FeatureOption;
 import org.springframework.stereotype.Service;
 
 @FeatureOption(defaultFeature = true)
