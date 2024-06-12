@@ -1,8 +1,8 @@
-package com.github.featuretoggles.orchestration;
+package com.github.frjufvjn.featuretoggles.orchestration;
 
-import com.github.featuretoggles.router.ManagedToggleType;
-import com.github.featuretoggles.FeatureException;
-import com.github.featuretoggles.FeatureOption;
+import com.github.frjufvjn.featuretoggles.router.ManagedToggleType;
+import com.github.frjufvjn.featuretoggles.FeatureException;
+import com.github.frjufvjn.featuretoggles.FeatureOption;
 import lombok.extern.slf4j.Slf4j;
 
 import java.util.Map;

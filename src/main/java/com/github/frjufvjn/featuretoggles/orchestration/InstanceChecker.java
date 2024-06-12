@@ -1,6 +1,6 @@
-package com.github.featuretoggles.orchestration;
+package com.github.frjufvjn.featuretoggles.orchestration;
 
-import com.github.featuretoggles.FeatureException;
+import com.github.frjufvjn.featuretoggles.FeatureException;
 
 import java.util.Set;
 

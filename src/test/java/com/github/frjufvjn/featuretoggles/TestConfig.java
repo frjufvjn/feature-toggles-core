@@ -1,8 +1,8 @@
-package com.github.featuretoggles;
+package com.github.frjufvjn.featuretoggles;
 
-import com.github.featuretoggles.router.FeatureCoreRouter;
-import com.github.featuretoggles.router.FeatureDataCoreProvider;
-import com.github.featuretoggles.router.FeatureDataFetcher;
+import com.github.frjufvjn.featuretoggles.router.FeatureCoreRouter;
+import com.github.frjufvjn.featuretoggles.router.FeatureDataCoreProvider;
+import com.github.frjufvjn.featuretoggles.router.FeatureDataFetcher;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 

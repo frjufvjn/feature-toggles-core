@@ -1,4 +1,4 @@
-package com.github.featuretoggles;
+package com.github.frjufvjn.featuretoggles;
 
 import java.util.HashMap;
 import java.util.Map;
