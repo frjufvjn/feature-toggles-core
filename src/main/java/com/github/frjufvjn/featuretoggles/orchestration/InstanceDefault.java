@@ -3,12 +3,11 @@ package com.github.frjufvjn.featuretoggles.orchestration;
 import com.github.frjufvjn.featuretoggles.router.ManagedToggleType;
 import com.github.frjufvjn.featuretoggles.FeatureException;
 import com.github.frjufvjn.featuretoggles.FeatureOption;
-import lombok.extern.slf4j.Slf4j;
 
 import java.util.Map;
 import java.util.Optional;
 
-@Slf4j
+// @Log4j2
 public class InstanceDefault {
     /**
      * 디폴트로 정의된 인스턴스인지 확인
@@ -30,7 +29,7 @@ public class InstanceDefault {
                 .filter(ManagedToggleType.DEFAULT.getCode()::equals)
                 .findFirst()
                 .orElseThrow(() -> new FeatureException("[feature-toggles] feature에 해당되는 인스턴스를 찾을 수 없습니다."));
-        log.warn("[feature-toggles] 지정한 feature에 해당되는 인스턴스를 찾을 수 없어서 디폴트로 정의된 인스턴스를 반환합니다.");
+        // log.warn("[feature-toggles] 지정한 feature에 해당되는 인스턴스를 찾을 수 없어서 디폴트로 정의된 인스턴스를 반환합니다.");
         return instances.get(defaultKey);
     }
 }
