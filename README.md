@@ -1,4 +1,4 @@
-# feature-toggles-core [![Java CI with Maven](https://github.com/frjufvjn/feature-toggles-core/actions/workflows/maven.yml/badge.svg)](https://github.com/frjufvjn/feature-toggles-core/actions/workflows/maven.yml) [![](https://jitpack.io/v/frjufvjn/feature-toggles-core.svg)](https://jitpack.io/#frjufvjn/feature-toggles-core)
+# feature-toggles-core [![Java CI with Gradle](https://github.com/frjufvjn/feature-toggles-core/actions/workflows/gradle.yml/badge.svg)](https://github.com/frjufvjn/feature-toggles-core/actions/workflows/gradle.yml) [![](https://jitpack.io/v/frjufvjn/feature-toggles-core.svg)](https://jitpack.io/#frjufvjn/feature-toggles-core)
 
 ***
 
@@ -12,9 +12,8 @@
 ## Usage
 1. 여러분의 스프링부트 애플리케이션에 의존성을 추가할 수 있습니다. 아래 링크의 가이드를 참고해주세요.   
 https://jitpack.io/#frjufvjn/feature-toggles-core
-2. 기본적인 사용방법은 테스트 코드들을 참고해주세요.
-3. data영역과 routing영역에 구현 책임이 사용자에게 있습니다.
-4. 피처토글을 적용하면 아래와 같은 전략패턴의 구조를 갖게 됩니다.
+2. data영역과 routing영역 구현 책임이 사용자에게 있습니다.
+3. 피처토글을 적용하면 아래와 같은 전략패턴의 구조를 갖게 됩니다.
 ![pattern](./assets/pattern.png)
 ***
 
