@@ -14,7 +14,7 @@ public class InstanceDefault {
      */
     protected static <T> boolean hasDefaultInstance(T instance) {
         FeatureOption featureOption = Optional.ofNullable(instance.getClass().getAnnotation(FeatureOption.class))
-                .orElse(ProxyBeanFeatureOptionResolver.getFeatureOptionIfProxyBean(instance));
+                .orElse(ProxyBeanExtractor.getFeatureOptionIfProxyBean(instance));
         if (featureOption == null) {
             throw new FeatureException("[feature-toggles] featureOption is null, instance: " + instance.getClass().getName());
         }
