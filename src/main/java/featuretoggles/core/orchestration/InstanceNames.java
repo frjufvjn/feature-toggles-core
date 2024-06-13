@@ -16,7 +16,7 @@ public class InstanceNames {
      */
     protected static <T> String getInstanceName(T instance) {
         FeatureOption featureOption = Optional.ofNullable(instance.getClass().getAnnotation(FeatureOption.class))
-                .orElse(ProxyBeanExtractor.getFeatureOptionIfProxyBean(instance));
+                .orElse(ProxyBeanFeatureOptionResolver.getFeatureOptionIfProxyBean(instance));
         if (featureOption != null) {
             // @FeatureOption 애노테이션의 name이 정의되어 있으면 name으로 정의
             String featureName = Objects.isNull(featureOption.name()) ? instance.getClass().getSimpleName() : featureOption.name();
