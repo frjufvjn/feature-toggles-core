@@ -10,10 +10,11 @@
 ***
 
 ## Usage
-1. 여러분의 스프링부트 애플리케이션에 의존성을 추가할 수 있습니다. 아래 링크의 [jitpack가이드](https://jitpack.io/#frjufvjn/feature-toggles-core)를 참고해주세요.
-2. data영역과 routing영역 구현 책임이 사용자에게 있습니다.
+1. 여러분의 스프링부트 애플리케이션에 의존성을 추가할 수 있습니다. [jitpack가이드](https://jitpack.io/#frjufvjn/feature-toggles-core)를 참고해주세요.
+2. data영역과 사용자기반 routing영역 구현 책임은 사용자에게 있습니다.
 3. 피처토글을 적용하면 아래와 같은 전략패턴의 구조를 갖게 됩니다.
-4. [Getting Started >>](GETTING_STARTED.md)    
+4. [User Guide](GETTING_STARTED.md)    
+5. [발표 자료](./assets/한빛앤세미나-작은서비스조금씩개선하기-피처토글-20240522-최종-pdf.pdf)    
 ![pattern](./assets/pattern.png)
 ***
 
@@ -30,7 +31,7 @@
   기능을 수행하는 클래스의 캡슐화를 깨지 않으면서 특정 기능의 활성화 여부를 결정하는 역할을 수행합니다.
 
 ## Roadmap
-- [ ] Data와 Routing 영역에 대한 가이드 레파지토리
+- [x] Data와 Routing 영역에 대한 가이드 레파지토리
 
 ## Contributing
 Welcome!!
