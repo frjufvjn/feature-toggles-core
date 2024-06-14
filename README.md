@@ -10,10 +10,10 @@
 ***
 
 ## Usage
-1. 여러분의 스프링부트 애플리케이션에 의존성을 추가할 수 있습니다. 아래 링크의 가이드를 참고해주세요.   
-https://jitpack.io/#frjufvjn/feature-toggles-core
+1. 여러분의 스프링부트 애플리케이션에 의존성을 추가할 수 있습니다. 아래 링크의 [jitpack가이드](https://jitpack.io/#frjufvjn/feature-toggles-core)를 참고해주세요.
 2. data영역과 routing영역 구현 책임이 사용자에게 있습니다.
 3. 피처토글을 적용하면 아래와 같은 전략패턴의 구조를 갖게 됩니다.
+4. [Getting Started >>](GETTING_STARTED.md)    
 ![pattern](./assets/pattern.png)
 ***
 
