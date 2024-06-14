@@ -82,7 +82,7 @@ public interface AdvertService {
     String getContext();
 }
 ```
-### 구현 토글 대상 서비스 작성
+### 토글 대상 구현서비스 작성
 - default 토글 서비스 
 ```java
 @FeatureOption(defaultFeature = true)
@@ -91,6 +91,7 @@ public class AdvertServiceDefaultImpl implements AdvertService {
     @Transactional
     @Override
     public String getContext() {
+        ...
         return "default";
     }
 }
@@ -103,6 +104,7 @@ public class AdvertServiceReleaseImpl implements AdvertService {
     @Transactional
     @Override
     public String getContext() {
+        ...
         return "release";
     }
 }
@@ -124,7 +126,7 @@ public class AdvertServiceGate {
         return getActiveInstance().getContext();
     }
 
-    public AdvertService getActiveInstance() {
+    private AdvertService getActiveInstance() {
         return featureCoreRouter.getInstance("advert", advertServiceMap);
     }
 }
